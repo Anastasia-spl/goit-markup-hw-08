@@ -20,7 +20,8 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 hr {
@@ -40,7 +41,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
   font-size: 1em;
 }
 
@@ -286,7 +288,8 @@ img {
     right: 0;
     background-color: #ffffff;
     padding: 6rem 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
     opacity: 0;
     pointer-events: none;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
@@ -404,7 +407,8 @@ img {
   }
 }
 
-.nav__link:hover, .nav__link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: #2196f3;
 }
 
@@ -482,8 +486,7 @@ img {
     margin-bottom: 16px;
   }
 }
-
-@media screen and (min-width: 768px) and (max-width: 1599px) {
+1199 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -546,7 +549,8 @@ img {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list__link:hover, .social-list__link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: #2196f3;
   color: #ffffff;
 }
@@ -624,8 +628,7 @@ img {
   margin-left: 10px;
   fill: currentColor;
 }
-
-@media screen and (max-width: 1599px) {
+1199 @media screen and (max-width: 1599px) {
   .mailing-form__wrappar {
     margin-bottom: 20px;
   }
@@ -663,7 +666,8 @@ img {
   }
 }
 
-.address__text, .address__contacts {
+.address__text,
+.address__contacts {
   margin: 0px;
   text-align: center;
   color: #ffffff;
@@ -676,7 +680,8 @@ img {
 }
 
 @media (min-width: 1600px) {
-  .address__text, .address__contacts {
+  .address__text,
+  .address__contacts {
     text-align: left;
   }
 }
@@ -701,8 +706,7 @@ img {
     min-height: 80px;
   }
 }
-
-@media screen and (max-width: 1599px) {
+1199 @media screen and (max-width: 1599px) {
   .header .container {
     display: flex;
     justify-content: space-between;
@@ -813,10 +817,12 @@ img {
   text-align: center;
 }
 
-.filter-btns__btn:hover, .filter-btns__btn:focus {
+.filter-btns__btn:hover,
+.filter-btns__btn:focus {
   background-color: #2196f3;
   color: #ffffff;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
@@ -889,8 +895,10 @@ img {
   }
 }
 
-.portfolio__card:hover, .portfolio__card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio__card:hover,
+.portfolio__card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio__thumb {

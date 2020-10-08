@@ -18,7 +18,7 @@
 }
 
 .header .container {
-  @media screen and (max-width: 1599px) {
+  @media screen and (max-width: 1199px) {
     @include flexbox(space-between);
   }
 }

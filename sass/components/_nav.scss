@@ -31,9 +31,6 @@
       pointer-events: all;
       transform: translateY(0) scale(1);
       z-index: 50;
-      body {
-        overflow: hidden;
-      }
     }
   }
   @include for-size(tablet) {
