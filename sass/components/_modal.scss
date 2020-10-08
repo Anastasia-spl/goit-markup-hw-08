@@ -1,0 +1,209 @@
+.backdrop {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition-duration $timing-function $transition-duration;
+}
+
+.backdrop.is-hidden .modal-w {
+  top: -100%;
+  transform: translate(-50%, -50%) scale(0.2);
+}
+
+.modal-w {
+  position: absolute;
+  width: 450px;
+
+  @include for-size(desktop) {
+    width: 528px;
+  }
+
+  // min-height: 581px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all $transition-duration $timing-function;
+
+  background-color: getColor("white-color");
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 4rem;
+  @include font-basis($sec-fs, $main-fw);
+  @include font-spacing();
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: getColor("white-color");
+  color: getColor("dark-logo");
+}
+
+.close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+
+  transition: fill $transition-duration $timing-function;
+}
+
+.close-modal:hover .close-icon,
+.close-modal:focus .close-icon {
+  fill: getColor("accent-color");
+  cursor: pointer;
+}
+
+.modal-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-header {
+  margin-bottom: 12px;
+  @include font-basis(2rem, $bold-fw);
+  @include font-spacing(1.15, $main-let-space);
+  text-align: center;
+  color: getColor("title-text-color");
+}
+
+.modal-label {
+  margin-bottom: 4px;
+  @include font-basis(1.2rem, $main-fw);
+  @include font-spacing(1.67, 0.01);
+  color: getColor("primary-text-color");
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-content .input {
+  min-height: 40px;
+  width: 100%;
+  padding: 1.1rem 1.2rem 1.1rem 4.2rem;
+
+  transition: border-color $transition-duration $timing-function;
+}
+
+.modal-content .input,
+.textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  /* color: getColor('title-text-color'); */
+}
+
+.modal-content .input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: getColor("accent-color");
+}
+
+.modal-content .input:not(:placeholder-shown):invalid {
+  border-color: tomato;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: getColor("title-text-color");
+
+  transition: fill $transition-duration $timing-function;
+}
+
+.modal-content .input:focus ~ .modal-icon {
+  fill: getColor("accent-color");
+}
+
+.textarea {
+  resize: none;
+  min-width: 100%;
+  min-height: 120px;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 20px;
+}
+
+.textarea::placeholder {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.user-agreement-wrapper {
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.user-agreement {
+  @include font-basis(1.2rem, $main-fw);
+  @include font-spacing(1.67, $main-let-space);
+
+  @include for-size(desktop) {
+    @include font-basis($main-fs, $main-fw);
+    @include font-spacing(1.71, $main-let-space);
+  }
+  color: getColor("primary-text-color");
+}
+
+.agreement-conditions {
+  color: getColor("accent-color");
+}
+
+.user-agreement::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 7px;
+
+  border: 2px solid getColor("title-text-color");
+  border-radius: 2px;
+
+  transition: all $transition-duration $timing-function;
+}
+
+.checkbox-agreement:checked + .user-agreement::before {
+  background-image: url(../images/icon-checked.svg);
+  background-color: getColor("accent-color");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-origin: border-box;
+  border-color: transparent;
+}
+
+.modal-content .btn {
+  align-self: center;
+  background: #188ce8;
+}

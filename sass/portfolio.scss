@@ -1,0 +1,150 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/normalize";
+@import "./base/common";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/contacts";
+@import "./components/btn";
+@import "./components/social-list";
+@import "./components/forms";
+@import "./components/address";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+.filter-btns {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  @include for-size(tablet) {
+    padding-bottom: 3rem;
+  }
+  @include for-size(desktop) {
+    padding-top: 9.4rem;
+    padding-bottom: 3.4rem;
+  }
+}
+
+.filter-btns__list {
+  @include flexbox();
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.filter-btns__btn {
+  display: block;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 2.2rem;
+  transition: all $transition-duration $timing-function;
+  background-color: getColor("decoration-bg-color");
+  color: getColor("title-text-color");
+  @include font-basis($sec-fs, 500);
+  @include font-spacing(1.63, $main-let-space);
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent-color");
+    color: getColor("white-color");
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+  }
+}
+
+.filter-btns__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btns__item:nth-child(-n + 3) {
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+}
+
+.portfolio {
+  padding-bottom: 9.4rem;
+
+  &__name {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    color: getColor("title-text-color");
+    @include font-basis(1.8rem, $bold-fw);
+    @include font-spacing(2, $sec-let-space);
+  }
+
+  &__service {
+    margin: 0px 0px;
+    color: getColor("primary-text-color");
+    @include font-basis($sec-fs, $main-fw);
+    @include font-spacing(1.87, $main-let-space);
+  }
+}
+
+.portfolio__list {
+  margin: -15px;
+  @include for-size(tablet) {
+    @include flexbox(flex-start, stretch);
+    flex-wrap: wrap;
+  }
+}
+
+.portfolio__card {
+  margin: 15px;
+  transition: box-shadow $transition-duration $timing-function;
+
+  @include for-size(tablet) {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+  @include for-size(desktop) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__content {
+  padding: 2rem 2.4rem;
+  border-right: 1px solid getColor("border-color");
+  border-bottom: 1px solid getColor("border-color");
+  border-left: 1px solid getColor("border-color");
+}
+
+.portfolio__overlay {
+  position: absolute;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform $transition-duration $timing-function;
+
+  padding: 6.3rem 2.4rem;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: getColor("white-color");
+  @include font-basis(1.8rem, $main-fw);
+  @include font-spacing(1.56, $main-let-space);
+
+  .portfolio__thumb:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,31 @@
+.social-list__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list__link {
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: getColor("icon-color");
+  border-radius: 50%;
+
+  transition: all $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent-color");
+    color: getColor("white-color");
+  }
+
+  &--dark {
+    @include flexbox();
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

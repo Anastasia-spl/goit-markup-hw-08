@@ -1,0 +1,33 @@
+.logo {
+  display: block;
+  text-align: center;
+  @include font-basis(2.4rem, $bold-fw);
+  @include font-spacing(1.17, $main-let-space);
+  font-family: $logo-ff;
+  text-decoration: none;
+
+  @include for-size(desktop) {
+    text-align: start;
+  }
+
+  @include for-size(desktop) {
+    @include font-basis(2.8rem, $bold-fw);
+    @include font-spacing(1.19, $main-let-space);
+    font-family: $logo-ff;
+  }
+
+  &__web {
+    color: getColor("accent-color");
+  }
+
+  &--dark {
+    color: getColor("dark-logo");
+    margin-right: 93px;
+  }
+
+  &--light {
+    margin-bottom: 20px;
+
+    color: getColor("white-color");
+  }
+}

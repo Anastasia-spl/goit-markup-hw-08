@@ -1,0 +1,39 @@
+.footer {
+  background-color: getColor("footer-bg-color");
+  padding: 6rem 0;
+}
+
+.join {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  @include for-size(desktop) {
+    margin-right: 93px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: getColor("white-color");
+    @include font-basis($main-fs, $bold-fw);
+    @include font-spacing();
+    text-transform: uppercase;
+
+    @include for-size(desktop) {
+      text-align: start;
+    }
+  }
+}
+
+.footer .container {
+  @include for-size(tablet) {
+    @include flexbox(center, baseline);
+    flex-wrap: wrap;
+  }
+  @include for-size(desktop) {
+    @include flexbox(space-between, baseline);
+    flex-wrap: nowrap;
+  }
+}

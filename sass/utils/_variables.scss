@@ -1,0 +1,32 @@
+$colors: (
+  "decoration-bg-color": #f5f4fa,
+  "primary-text-color": #757575,
+  "title-text-color": #212121,
+  "accent-color": #2196f3,
+  "dark-logo": #000000,
+  "white-color": #ffffff,
+  "footer-bg-color": #2f303a,
+  "f-contacts-color": #ffffff99,
+  "line-color": #ececec,
+  "border-color": #eeeeee,
+  "icon-color": #afb1b8,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$transition-duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$main-ff: "Roboto", sans-serif;
+$main-fs: 1.4rem;
+$sec-fs: 1.6rem;
+$main-let-space: 0.03em;
+$sec-let-space: 0.06em;
+$main-line-height: 1.14;
+$main-fw: 400;
+$bold-fw: 700;
+$main-f-style: normal;
+
+$logo-ff: "Raleway", sans-serif;
