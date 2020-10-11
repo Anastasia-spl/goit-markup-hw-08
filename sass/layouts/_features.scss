@@ -6,6 +6,9 @@
   }
 
   &__title {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
     @include font-basis($main-fs, $bold-fw);
     @include font-spacing($main-line-height, $main-let-space);
     text-transform: uppercase;

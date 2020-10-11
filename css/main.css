@@ -264,9 +264,8 @@ img {
 
 @media screen and (max-width: 767px) {
   .header .container {
-    position: relative;
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -281,10 +280,11 @@ img {
 @media screen and (max-width: 767px) {
   .menu-container {
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     right: 0;
     background-color: #ffffff;
+    border-top: 1px solid #ececec;
     padding: 6rem 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     opacity: 0;
@@ -297,6 +297,7 @@ img {
     pointer-events: all;
     transform: translateY(0) scale(1);
     z-index: 50;
+    position: fixed;
   }
 }
 
@@ -913,6 +914,9 @@ img {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
   min-height: 60px;
@@ -945,7 +949,6 @@ img {
 @media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
-    background-size: 480px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_mobile.jpg);
   }
 }
@@ -959,7 +962,6 @@ img {
 @media (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-size: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_tablet.jpg);
   }
 }
@@ -1046,6 +1048,12 @@ img {
   color: #212121;
 }
 
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
 .features__text {
   margin: 0px;
   font-family: "Roboto", sans-serif;
@@ -1101,7 +1109,6 @@ img {
 
 .services {
   display: none;
-  padding-top: 9.4rem;
   padding-bottom: 9.4rem;
 }
 
