@@ -920,6 +920,7 @@ img {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
   min-height: 60px;
+  z-index: 100;
 }
 
 @media (min-width: 768px) {

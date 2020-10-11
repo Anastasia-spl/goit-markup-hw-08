@@ -698,6 +698,7 @@ img {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
   min-height: 60px;
+  z-index: 100;
 }
 
 @media (min-width: 768px) {
@@ -893,7 +894,11 @@ img {
   }
 }
 
-.portfolio__card:hover, .portfolio__card:focus {
+.portfolio__link {
+  display: block;
+}
+
+.portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
